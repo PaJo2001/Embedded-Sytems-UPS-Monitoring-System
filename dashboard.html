@@ -1,0 +1,40 @@
+<script language="javascript">
+
+    function updatehum() {
+    
+       obj = document.humgraph;
+    
+       obj.src = obj.src + "?" + Math.random();
+    
+       //Following statement sets the delay before the function will
+    
+       //call itself again (in milliseconds)
+    
+       setTimeout("updatehum()",521);
+    
+    }
+    
+    </script>
+    <script language="javascript">
+
+      function updatetemp() {
+      
+         obj = document.tempgraph;
+      
+         obj.src = obj.src + "?" + Math.random();
+      
+         //Following statement sets the delay before the function will
+      
+         //call itself again (in milliseconds)
+      
+         setTimeout("updatetemp()",541);
+      
+      }
+      
+      </script>
+    
+    
+    <body>
+    <img  onload="updatetemp();" name="tempgraph" src="temp_graph.png" />
+    <img  onload="updatehum();" name="humgraph" src="hum_graph.png"  />
+    </body> 
